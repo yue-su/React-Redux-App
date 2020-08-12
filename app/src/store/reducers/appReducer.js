@@ -1,6 +1,11 @@
-import { FETCHING_DATA_START, FETCH_DATA_SUCCESS } from "../actions"
+import {
+  FETCHING_DATA_START,
+  FETCH_DATA_SUCCESS,
+  FETCH_SERIES,
+} from "../actions"
 
 const initialState = {
+  series: [],
   amiiboList: [],
   isLoading: false,
   error: "",
@@ -19,6 +24,12 @@ export const appReducer = (state = initialState, action) => {
         ...state,
         isLoading: false,
         amiiboList: action.payload,
+      }
+    case FETCH_SERIES:
+      return {
+        ...state,
+        islading: false,
+        series: action.payload,
       }
     default:
       return state

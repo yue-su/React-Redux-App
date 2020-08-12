@@ -1,20 +1,23 @@
-import React from 'react';
-import Header from './components/Header';
-import { Container, Box } from '@material-ui/core';
-import CardList from './components/CardList';
+import React from "react"
+import Header from "./components/Header"
+import { Container, Box, Grid } from "@material-ui/core"
+import CardList from "./components/CardList"
+import Series from "./components/Series"
 
 function App() {
-
-
-
   return (
-    <div className="App">
+    <Box>
       <Header />
-      <Container>
+      <Grid container>
+        <Grid item xs={6}>
+          <Series />
+        </Grid>
+        <Grid item xs={6}>
           <CardList />
-      </Container>
-    </div>
-  );
+        </Grid>
+      </Grid>
+    </Box>
+  )
 }
 
-export default App;
+export default App
