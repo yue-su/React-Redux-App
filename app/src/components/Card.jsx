@@ -15,7 +15,7 @@ const Amiibo = (props) => {
       m={1}
       width="100px"
       height="200px"
-      elevation={2}
+      elevation={4}
       display="flex"
       flexDirection="column"
       justifyContent="space-between"
