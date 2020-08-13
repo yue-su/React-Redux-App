@@ -4,4 +4,5 @@ export {
   FETCH_SERIES,
   fetchData,
   fetchSeries,
+  seriesSelect,
 } from "./appActions"

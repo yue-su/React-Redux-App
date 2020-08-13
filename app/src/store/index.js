@@ -1,2 +1,2 @@
 export { reducer } from "./reducers"
-export { fetchData, fetchSeries } from "./actions"
+export { fetchData, fetchSeries, seriesSelect } from "./actions"

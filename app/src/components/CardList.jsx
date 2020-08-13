@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
-import Card from "./Card"
+import Amiibo from "./Card"
 import { fetchData } from "../store"
 import { Box } from "@material-ui/core"
 
@@ -16,13 +16,17 @@ const CardList = () => {
 
   return (
     <Box
+      p={3}
+      border={3}
+      borderColor="secondary.main"
+      borderRadius="15px"
       justifyContent="space-around"
       display="flex"
       flexDirection="row"
       flexWrap="wrap"
     >
       {amiiboList.map((amiibo) => {
-        return <Card key={amiibo.tail} amiibo={amiibo} />
+        return <Amiibo key={amiibo.tail} amiibo={amiibo} />
       })}
     </Box>
   )

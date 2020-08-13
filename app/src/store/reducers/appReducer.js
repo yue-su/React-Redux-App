@@ -31,6 +31,13 @@ export const appReducer = (state = initialState, action) => {
         islading: false,
         series: action.payload,
       }
+    case "SELECT_SERIES":
+      return {
+        ...state,
+        amiiboList: state.amiiboList.filter(
+          (amiibo) => amiibo.amiiboSeries == action.payload
+        ),
+      }
     default:
       return state
   }

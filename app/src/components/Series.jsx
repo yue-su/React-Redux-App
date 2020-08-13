@@ -1,6 +1,6 @@
 import React, { useEffect } from "react"
 import { useSelector, useDispatch } from "react-redux"
-import { fetchSeries } from "../store"
+import { fetchSeries, seriesSelect } from "../store"
 import { Button, Box } from "@material-ui/core"
 
 const Series = () => {
@@ -20,8 +20,13 @@ const Series = () => {
     >
       {series.map((item) => {
         return (
-          <Box key={item.key} m={1} width="80%">
-            <Button fullWidth color="secondary" variant="contained">
+          <Box key={item.key} m={1} width="40%">
+            <Button
+              onClick={() => dispatch(seriesSelect(item.name))}
+              fullWidth
+              color="secondary"
+              variant="contained"
+            >
               {item.name}
             </Button>
           </Box>

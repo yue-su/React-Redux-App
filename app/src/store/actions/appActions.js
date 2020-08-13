@@ -22,3 +22,11 @@ export const fetchSeries = () => (dispatch) => {
     dispatch({ type: FETCH_SERIES, payload: res.data.amiibo })
   })
 }
+
+export const seriesSelect = (name) => (dispatch) => {
+  axios
+    .get(`https://www.amiiboapi.com/api/amiibo/?amiiboSeries=${name}`)
+    .then((res) => {
+      dispatch({ type: FETCH_DATA_SUCCESS, payload: res.data.amiibo })
+    })
+}

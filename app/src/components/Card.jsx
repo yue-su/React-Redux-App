@@ -1,13 +1,37 @@
 import React from "react"
-import { Typography, Box, Paper, Avatar } from "@material-ui/core"
+import {
+  Typography,
+  Box,
+  Paper,
+  Avatar,
+  Card,
+  CardMedia,
+  CardContent,
+} from "@material-ui/core"
 
-const Card = (props) => {
+const Amiibo = (props) => {
   return (
-    <Box elevation={5} width="100px">
-      <Avatar size="large" src={props.amiibo.image}></Avatar>
-      <Typography variant="subtitle2">{props.amiibo.name}</Typography>
+    <Box
+      m={1}
+      width="100px"
+      height="200px"
+      elevation={2}
+      display="flex"
+      flexDirection="column"
+      justifyContent="space-between"
+      alignItems="center"
+      boxShadow={1}
+      borderRadius="10px"
+    >
+      <Card elevation={0}>
+        <CardMedia component="img" src={props.amiibo.image} />
+        <CardContent></CardContent>
+      </Card>
+      <Typography variant="subtitle2" align="center">
+        {props.amiibo.name}
+      </Typography>
     </Box>
   )
 }
 
-export default Card
+export default Amiibo
