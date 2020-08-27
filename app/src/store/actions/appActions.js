@@ -3,6 +3,7 @@ import axios from "axios"
 export const FETCHING_DATA_START = "FETCHING_DATA_START"
 export const FETCH_DATA_SUCCESS = "FETCH_DATA_SUCCESS"
 export const FETCH_SERIES = "FETCH_SERIES"
+
 export const fetchData = (apiKey) => (dispatch) => {
   // dispatch FETCHING action
   dispatch({ type: FETCHING_DATA_START })
